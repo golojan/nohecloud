@@ -6,6 +6,7 @@
   "private": true,
   "dependencies": {
     "@prisma/client": "^4.12.0",
+    "@swc/helpers": "~0.4.11",
     "axios": "^1.0.0",
     "busboy": "^1.6.0",
     "cookie-parser": "^1.4.6",
@@ -24,6 +25,8 @@
     "@nrwl/nx-cloud": "latest",
     "@nrwl/webpack": "15.9.2",
     "@nrwl/workspace": "15.9.2",
+    "@swc/cli": "~0.1.55",
+    "@swc/core": "^1.2.173",
     "@types/busboy": "^1.5.0",
     "@types/cookie-parser": "^1.4.3",
     "@types/cors": "^2.8.13",

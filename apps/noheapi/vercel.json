@@ -1,22 +1,22 @@
 {
-    "version": 2,
-    "crons": [
-        {
-            "path": "/crons/delete-pages",
-            "schedule": "0 2 */2 * *"
-        }
-    ],
-    "builds": [
-        {
-            "src": "./src/main.ts",
-            "use": "@vercel/node"
-        }
-    ],
-    "outputDirectory": "build",
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "./src/main.ts"
-        }
-    ]
+  "version": 2,
+  "crons": [
+    {
+      "path": "/crons/delete-pages",
+      "schedule": "0 2 */2 * *"
+    }
+  ],
+  "builds": [
+    {
+      "src": "./src/main.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "outputDirectory": "./dist/apps/noheapi",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "./src/main.ts"
+    }
+  ]
 }
