@@ -11,7 +11,7 @@ import cookieParser from 'cookie-parser'
 import dotenv from 'dotenv'
 dotenv.config()
 
-import middleware from '../libs/middleware'
+// import middleware from '../libs/middleware'
 
 const server: Application = express()
 
@@ -24,7 +24,7 @@ server.use(express.urlencoded({ extended: false, limit: '50mb' }))
 server.use("/assets", express.static(path.join(__dirname, "assets")));
 
 // middleware
-server.use(middleware)
+// server.use(middleware)
 
 
 server.get("/", (req:Request, res:Response) => {
