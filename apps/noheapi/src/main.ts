@@ -32,7 +32,7 @@ server.get('/', (req: Request, res: Response) => {
 
 const port = process.env.PORT || 3000;
 const app = server.listen(port, () => {
-  console.log(`Listening at http://localhost:${port}/api`);
+  console.log(`Listening at http://localhost:${port}`);
 });
 
 app.on('error', console.error);
