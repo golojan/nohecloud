@@ -11,7 +11,7 @@ import cookieParser from 'cookie-parser'
 import dotenv from 'dotenv'
 dotenv.config()
 
-// import middleware from '../libs/middleware'
+import middleware from '../libs/middleware'
 
 const server: Application = express()
 
