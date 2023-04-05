@@ -26,7 +26,8 @@ server.use("/assets", express.static(path.join(__dirname, "assets")));
 // middleware
 server.use(middleware)
 
-server.get("/api", (req:Request, res:Response) => {
+
+server.get("/", (req:Request, res:Response) => {
   res.status(200).json({ success: true ,error: false});
 });
 
