@@ -15,8 +15,8 @@
     "outputDirectory": "build",
     "routes": [
         {
-            "src": "./src/(.*)",
-            "dest": "src/main.ts"
+            "src": "/(.*)",
+            "dest": "./src/main.ts"
         }
     ]
 }
