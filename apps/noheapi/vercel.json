@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "crons": [
+        {
+            "path": "/crons/delete-pages",
+            "schedule": "0 2 */2 * *"
+        }
+    ],
+    "builds": [
+        {
+            "src": "src/server.ts",
+            "use": "@vercel/node"
+        }
+    ],
+    "outputDirectory": "build",
+    "routes": [
+        {
+            "src": "/src/(.*)",
+            "dest": "src/server.ts"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "noheapi",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/noheapi/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/noheapi",
+        "main": "apps/noheapi/src/main.ts",
+        "tsConfig": "apps/noheapi/tsconfig.app.json",
+        "assets": ["apps/noheapi/src/assets"],
+        "isolatedConfig": true,
+        "webpackConfig": "apps/noheapi/webpack.config.js"
+      },
+      "configurations": {
+        "development": {},
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "noheapi:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "noheapi:build:development"
+        },
+        "production": {
+          "buildTarget": "noheapi:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/noheapi/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}
